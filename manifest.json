@@ -1,0 +1,24 @@
+{
+    "name": "Fix Twitter",
+    "description": "Fix some annyoing things about the Twitter web app",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "author": "Christoph Werner <christoph@codepunkt.de>",
+    "homepage_url": "https://github.com/codepunkt/fix-twitter",
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "js": [ "content.js" ],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "storage"
+    ]
+}
